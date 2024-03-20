@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card-cover">
+            <canvas class="canvas" width="300" height="670" id="canvas">
+                <div class="card__info">
+                    <div class="card__rating">
+                        <span class="rating">99</span>
+                        <span>rating</span>
+                    </div>
+                    <div class="card__name">
+                        <span class="name">Pavel Simvolokov</span>
+                        <span class="position">left winger</span>
+                    </div>
+                </div>
+            </canvas>
+            
+
+        </div>
+        <div class="settings">
+            <h2 class="settings__title">Los-Khavsk Card Generator</h2>
+            <label class="settings__label">
+                <span>Имя игрока</span>
+                <input value="Name" id="nameInput" type="text">
+            </label>
+            <label class="settings__label">
+                <span>Позиция игрока</span>
+                <select id="positionInput" class="position" data-value="GK" onchange="setOption()">
+                    <option value="GK">GK</option>
+                    <option value="LB">LB</option>
+                    <option value="RB">RB</option>
+                    <option value="CB">CB</option>
+                    <option value="LWB">LWB</option>
+                    <option value="RWB">RWB</option>
+                    <option value="CDM">CDM</option>
+                    <option value="CM">CM</option>
+                    <option value="CAM">CAM</option>
+                    <option value="RM">RM</option>
+                    <option value="LM">LM</option>
+                    <option value="RW">RW</option>
+                    <option value="LW">LW</option>
+                    <option value="RF">RF</option>
+                    <option value="LF">LF</option>
+                    <option value="CF">CF</option>
+                    <option value="ST">ST</option>
+                </select>
+            </label>
+            <label class="settings__label">
+                <span>Показатель скорости</span>
+                <input max="99" min="1" class="input-stats" value="99" id="speedInput" type="number">
+            </label>
+            <label class="settings__label">
+                <span>Показатель паса</span>
+                <input max="99" min="1" class="input-stats" value="99" id="passInput" type="number">
+            </label>
+            <label class="settings__label">
+                <span>Показатель физики</span>
+                <input max="99" min="1" class="input-stats" value="99" id="physicsInput" type="number">
+            </label>
+            <label class="settings__label">
+                <span>Показатель удара</span>
+                <input max="99" min="1" class="input-stats" value="99" id="shootingInput" type="number">
+            </label>
+            <label class="settings__label">
+                <span>Показатель дриблинга</span>
+                <input max="99" min="1" class="input-stats" value="99" id="dribblingInput" type="number">
+            </label>
+            <label class="settings__label">
+                <span>Показатель навыков защиты</span>
+                <input max="99" min="1" class="input-stats" value="99" id="defenseInput" type="number">
+            </label>
+            <input type="file" class="settings__upload-btn" id="fileInput">
+            <a href="#" download="my-canvas.png" class="settings__download-btn" id="downloadBtn">Скачать карточку</a>
+            
+        </div>
+    </div>
+    <script defer src="script.js"></script>
+</body>
+</html>
