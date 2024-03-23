@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Card Generator</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -29,11 +29,11 @@
             <h2 class="settings__title">Los-Khavsk Card Generator</h2>
             <label class="settings__label">
                 <span>Имя игрока</span>
-                <input value="Name" id="nameInput" type="text">
+                <input class="input-stats" value="Name" id="nameInput" type="text">
             </label>
             <label class="settings__label">
                 <span>Позиция игрока</span>
-                <select id="positionInput" class="position" data-value="GK" onchange="setOption()">
+                <select id="positionInput" class="position" data-value="GK">
                     <option value="GK">GK</option>
                     <option value="LB">LB</option>
                     <option value="RB">RB</option>
@@ -65,6 +65,8 @@
                 <span>Показатель физики</span>
                 <input max="99" min="1" class="input-stats" value="99" id="physicsInput" type="number">
             </label>
+
+            
             <label class="settings__label">
                 <span>Показатель удара</span>
                 <input max="99" min="1" class="input-stats" value="99" id="shootingInput" type="number">
@@ -78,10 +80,12 @@
                 <input max="99" min="1" class="input-stats" value="99" id="defenseInput" type="number">
             </label>
             <input type="file" class="settings__upload-btn" id="fileInput">
-            <a href="#" download="my-canvas.png" class="settings__download-btn" id="downloadBtn">Скачать карточку</a>
-            
+            <a href="#" download="my-canvas.png" class="btn settings__download-btn" id="downloadBtn">Скачать карточку</a>
+            <button class="btn btn-reset setting__upload-to-Base" id="uploadToBase">Загрузить карточку на сайт</button>
+            <span class="progress" id="uploadProgress">Загрузка не начата..</span>
+            <a class="btn" href="home.html">Посмотреть карточки других пользователей</a>
         </div>
     </div>
-    <script defer src="script.js"></script>
+    <script type="module" src="js/script.js"></script>
 </body>
 </html>

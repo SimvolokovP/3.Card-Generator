@@ -62,16 +62,17 @@ body {
 }
 
 .card-cover {
-    width: 70%;
+    width: max-content;
     border-right: 2px solid #8720F1;
     margin-right: -2px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .settings {
-    width: 30%;
+    width: 100%;
     border-left: 2px solid #8720F1;
     padding: 10px;
     display: flex;
@@ -95,4 +96,73 @@ body {
     flex-direction: column;
     align-items: start;
     gap: 5px;
+}
+
+.input-stats {
+    width: 100%;
+}
+
+.settings__download-btn,
+.setting__upload-to-Base {
+    width: max-content;
+    display: flex;
+    justify-content: start;
+}
+
+@media (max-width: 690px) {
+    .canvas {
+        transform: scale(0.8);
+    }
+
+    .container {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .card-cover {
+        width: 100%;
+        padding: 10px;
+        border-right: none;
+    }
+
+}
+
+@media (max-width: 360px) {
+    .input-stats {
+        width: 310px;
+    }
+}
+
+.btn {
+    background-color: #8720F1;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    height: max-content;
+}
+
+.card img {
+    transform: scale(0.8);
+}
+
+.actions {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+.home__container {
+    flex-direction: column;
+}
+
+.create__card {
+    width: 320px;
 }
