@@ -47,17 +47,22 @@ function cardsToHTML(cards) {
     swiperContainer.classList.add('swiper-container');
     const swiperWrapper = document.createElement('div');
     swiperWrapper.classList.add('swiper-wrapper');
+    const swiperScroll = document.createElement('div');
+    swiperScroll.classList.add('swiper-scroll-bar');
 
     const cardsSwiper = cards.map(card => `<div  class="swiper-slide card">
         <img loading="lazy" src="${card.image}" data-id="${card.id}">
         </div>`).join('');
         swiperWrapper.insertAdjacentHTML('beforeend', cardsSwiper);
-        swiperContainer.append(swiperWrapper);
+        swiperContainer.append(swiperWrapper, swiperScroll);
         
         let postSwiper = new Swiper(swiperContainer, {
             slidesPerView: 'auto',
             spaceBetween: 10,
-            loop: false
+            loop: false, 
+            autoplay: {
+                delay: 2500
+            }
     });
 
     gallery.append(swiperContainer);
